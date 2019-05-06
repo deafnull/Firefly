@@ -1,0 +1,34 @@
+version: '3.5'
+
+services:
+ 
+  firefly.mssql:
+    build:
+      context: ./docker-setup/mssql/
+      dockerfile: Dockerfile      
+    container_name: firefly.mssql
+    networks:
+      - firefly
+    ports:
+      - 1422:1433
+    environment:
+      SA_PASSWORD: gso2h8gh4ww8agwe224*d
+      ACCEPT_EULA: Y
+
+  firefly.authmanager.api:
+    build:
+      context: .
+      dockerfile: ./Firefly.AuthManager.Api/Dockerfile
+    container_name: firefly.authManager.api
+    networks:
+      - firefly
+    ports:
+      - 5000:80
+    environment:
+      - Database:ConnectionString=Server=firefly.mssql;Database=FireflyAuth;User Id=SA;Password=gso2h8gh4ww8agwe224*d
+    depends_on:
+      - firefly.mssql
+
+networks:
+  firefly:
+    driver: bridge

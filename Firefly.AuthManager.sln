@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Firefly.AuthManager.Api", "Firefly.AuthManager.Api\Firefly.AuthManager.Api.csproj", "{348F2A8D-0DB7-4D59-AA36-61F9A2FAB202}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Firefly.AuthManager", "Firefly.AuthManager\Firefly.AuthManager.csproj", "{EC776CBA-5015-4B7E-983F-80733DC30EC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{45232CA2-7876-41D7-A1FB-E96912703848}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose-deps.yml = docker-compose-deps.yml
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Firefly.AuthManager.UnitTests", "Firefly.AuthManager.UnitTests\Firefly.AuthManager.UnitTests.csproj", "{4E40708B-8244-49B3-A01A-4D2385DCA055}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Firefly.AuthManager.IntegrationTests", "Firefly.AuthManager.IntegrationTests\Firefly.AuthManager.IntegrationTests.csproj", "{4797CBEF-93ED-4FD3-8E25-2A646C8D8E33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker-setup", "docker-setup", "{DD814A4B-B2D1-41D2-92A6-9EB0B3981E3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mssql", "mssql", "{3B57F894-DAB5-461F-814F-6668E5AD67EB}"
+	ProjectSection(SolutionItems) = preProject
+		docker-setup\mssql\Dockerfile = docker-setup\mssql\Dockerfile
+		docker-setup\mssql\entrypoint.sh = docker-setup\mssql\entrypoint.sh
+		docker-setup\mssql\mssql-init.sh = docker-setup\mssql\mssql-init.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "migrations", "migrations", "{C21FB755-EB64-48BB-8B73-087091EA25A1}"
+	ProjectSection(SolutionItems) = preProject
+		docker-setup\mssql\migrations\01-init-database.sql = docker-setup\mssql\migrations\01-init-database.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{348F2A8D-0DB7-4D59-AA36-61F9A2FAB202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348F2A8D-0DB7-4D59-AA36-61F9A2FAB202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348F2A8D-0DB7-4D59-AA36-61F9A2FAB202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348F2A8D-0DB7-4D59-AA36-61F9A2FAB202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC776CBA-5015-4B7E-983F-80733DC30EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC776CBA-5015-4B7E-983F-80733DC30EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC776CBA-5015-4B7E-983F-80733DC30EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC776CBA-5015-4B7E-983F-80733DC30EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E40708B-8244-49B3-A01A-4D2385DCA055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E40708B-8244-49B3-A01A-4D2385DCA055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E40708B-8244-49B3-A01A-4D2385DCA055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E40708B-8244-49B3-A01A-4D2385DCA055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4797CBEF-93ED-4FD3-8E25-2A646C8D8E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4797CBEF-93ED-4FD3-8E25-2A646C8D8E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4797CBEF-93ED-4FD3-8E25-2A646C8D8E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4797CBEF-93ED-4FD3-8E25-2A646C8D8E33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B57F894-DAB5-461F-814F-6668E5AD67EB} = {DD814A4B-B2D1-41D2-92A6-9EB0B3981E3C}
+		{C21FB755-EB64-48BB-8B73-087091EA25A1} = {3B57F894-DAB5-461F-814F-6668E5AD67EB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E6D6135-C0CF-4996-9902-211BD3EB9614}
+	EndGlobalSection
+EndGlobal
