@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/mssql/server:2017-latest
+FROM mcr.microsoft.com/mssql/server:2017-CU15-ubuntu
 RUN apt-get update && apt-get install -y dos2unix
 
 RUN mkdir -p /mssql
